@@ -2,10 +2,10 @@
 Pulse
 
 # Features
-* Share Projects
-* Message other developers
-* Rate others work
-* Search other developers
+* Monitor Patients
+* Gather Data on Various Health Diseases
+* Provide a Good Source of Direct Contact in the Hospital
+* Develop Further Research in Diseases
 
 # Course Overview
 * Basic React Native Components
