@@ -1,5 +1,5 @@
 # Pulse
-Pulse
+Pulse!
 
 # Features
 * Monitor Patients
