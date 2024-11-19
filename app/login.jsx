@@ -1,11 +1,15 @@
 import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'react-native';
 import React, { useState } from 'react';
 import { Link } from 'expo-router';
+import FormField from '../components/FormField';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [form, setForm] = useState ({
+    email: '',
+    password: ''
+  })
   return (
     <ScrollView className="flex-1 bg-teal-50 p-4">
       {/* Logo Section */}
@@ -21,25 +25,23 @@ const Login = () => {
       {/* Email Input */}
       <View className="mt-6">
         <Text className="text-teal-800 mb-1">Email</Text>
-        <TextInput
-          value={email}
-          onChangeText={setEmail}
-          placeholder="Enter your email"
-          keyboardType="email-address"
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+       <FormField
+       title = "Email"
+       value = {form.email}
+       handleChangeText={(e) => setForm({ ...form, email: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
       {/* Password Input */}
       <View className="mt-4">
         <Text className="text-teal-800 mb-1">Password</Text>
-        <TextInput
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Enter your password"
-          secureTextEntry
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Password"
+       value = {form.password}
+       handleChangeText={(e) => setForm({ ...form, password: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
       {/* Login Button */}

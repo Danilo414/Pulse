@@ -2,14 +2,17 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView, Image } from 'reac
 import React, { useState } from 'react';
 import { Picker } from '@react-native-picker/picker';
 import { Link } from 'expo-router';
+import FormField from '../components/FormField';
 
 const signup = () => {
-  const [firstname, setFirstname] = useState('');
-  const [lastname, setLastname] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [age, setAge] = useState('');
   const [gender, setGender] = useState('');
+  const [form, setForm] = useState ({
+    email: '',
+    password: '',
+    Lastname: '',
+    Firstname: '',
+    age: ''
+  })
 
   return (
     <ScrollView className="flex-1 bg-teal-50 p-4">
@@ -25,61 +28,56 @@ const signup = () => {
         {/* FirstName Section */}
       <View className="mt-6">
         <Text className="text-teal-800 mb-1">FirstName</Text>
-        <TextInput
-          value={firstname}
-          onChangeText={setFirstname}
-          placeholder="Enter your firstname"
-          keyboardType="firstname"
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Firstname"
+       value = {form.Firstname}
+       handleChangeText={(e) => setForm({ ...form, Firstname: e})}
+       otherStyles="mt-5"
+       />
       </View>
         {/* LastName Section */}
       <View className="mt-6">
         <Text className="text-teal-800 mb-1">LastName</Text>
-        <TextInput
-          value={lastname}
-          onChangeText={setLastname}
-          placeholder="Enter your lastname"
-          keyboardType="lastname"
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Lastname"
+       value = {form.Lastname}
+       handleChangeText={(e) => setForm({ ...form, Lastname: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
 
       {/* Email Input */}
       <View className="mt-6">
         <Text className="text-teal-800 mb-1">Email</Text>
-        <TextInput
-          value={email}
-          onChangeText={setEmail}
-          placeholder="Enter your email"
-          keyboardType="email-address"
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Email"
+       value = {form.email}
+       handleChangeText={(e) => setForm({ ...form, email: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
       {/* Password Input */}
       <View className="mt-4">
         <Text className="text-teal-800 mb-1">Password</Text>
-        <TextInput
-          value={password}
-          onChangeText={setPassword}
-          placeholder="Enter your password"
-          secureTextEntry
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Password"
+       value = {form.password}
+       handleChangeText={(e) => setForm({ ...form, password: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
       {/* Age Input */}
       <View className="mt-4">
         <Text className="text-teal-800 mb-1">Age</Text>
-        <TextInput
-          value={age}
-          onChangeText={setAge}
-          placeholder="Enter your age"
-          keyboardType="numeric"
-          className="bg-white p-2 rounded-md shadow text-gray-700"
-        />
+        <FormField
+       title = "Age"
+       value = {form.age}
+       handleChangeText={(e) => setForm({ ...form, age: e})}
+       otherStyles="mt-5"
+       />
       </View>
 
       {/* Gender Picker */}
