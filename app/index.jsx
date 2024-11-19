@@ -1,6 +1,7 @@
 import { Text, View, Image } from 'react-native';
 import React from 'react';
-import { Link } from 'expo-router';
+import { router } from 'expo-router';
+import CustomButton from '../components/CustomButtons';
 
 export default function App() {
   return (
@@ -13,9 +14,20 @@ export default function App() {
       <Text className="text-5xl font-black text-teal-700 mb-8">Pulse</Text>
       
       {/* Styled Link component for better appearance */}
-      <Link href="/login" className="text-2xl font-bold text-white bg-teal-800 px-4 py-2 rounded-full">
-        Go to Login
-      </Link>
+      <CustomButton 
+      title ="Login"
+      containerStyles="mt-4 items-center"
+      handlePress={()=> router.push('/login')}
+      >
+      </CustomButton>
+
+
+      <CustomButton 
+      title ="Register"
+      containerStyles="mt-4 items-center"
+      handlePress={()=> router.push('/signup')}
+      >
+      </CustomButton>
     </View>
   );
 }
