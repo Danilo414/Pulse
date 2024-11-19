@@ -21,7 +21,7 @@ Pulse!
 # Home Screen
 <img src="assets/images/Home.png">  
 
-# Register Screen
+# Sign up Screen
 <img src="assets/images/Register.png">  
 
 # Log in Screen
