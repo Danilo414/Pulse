@@ -19,13 +19,13 @@ Pulse!
 * HTML, CSS and JS
 
 # Home Screen
-<img src="assets/images/screenshot/onboarding.png">  
+<img src="assets/images/Home.png">  
 
-# Sign Up Screen
-<img src="assets/images/screenshot/signup.png">  
+# Register Screen
+<img src="assets/images/Register.png">  
 
-# Sign In Screen
-<img src="assets/images/screenshot/login.png">  
+# Log in Screen
+<img src="assets/images/Login.png">  
 
-# Tabs Screen
-<img src="assets/images/screenshot/tabs.png">  
+# Profile
+<img src="assets/images/Profile.png">  
