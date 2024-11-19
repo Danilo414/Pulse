@@ -24,8 +24,11 @@ Pulse!
 # Sign up Screen
 <img src="assets/images/Register.png">  
 
-# Log in Screen
+# Sign in Screen
 <img src="assets/images/Login.png">  
 
 # Profile
 <img src="assets/images/Profile.png">  
+
+# Tab Screen
+<img src="assets/images/Tab Screen.png">
